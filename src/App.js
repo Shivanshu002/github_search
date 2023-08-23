@@ -21,9 +21,7 @@ function App() {
 
     setUsername("");
   };
-
   return (
-
     <div className="container">
       <form onSubmit={handleSubmit} className="formCard">
         <input type="text" onChange={handleUsernameInput} value={username} placeholder="Enter your github UserName" />
@@ -32,7 +30,7 @@ function App() {
 
       {resData.message}
 
-      {resData && (resData.message !== "Not Found") && (
+      {resData && resData.message !== "Not Found" && (
         <div className="userDetailCard">
           <div className="userDetailBody">
             <p className="name">{resData.name}</p>
@@ -52,7 +50,6 @@ function App() {
         </div>
       )}
     </div>
-
   );
 }
 
